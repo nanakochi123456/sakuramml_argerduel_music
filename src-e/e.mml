@@ -1,0 +1,1025 @@
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+//
+// 「アーガーデュエル　プレイ説明用動画」
+//
+// 出演：青い鴉氏
+// 作曲：ななこっち★（なの）
+// 動画：ななこっち★（なの）
+// 著作者：NEET有志
+// MMLかき：ななこっち★（なの）
+// ライセンス：転載要許可
+//
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+//
+// タロットカードをモチーフにした、カードゲーム「アーガーデュエル」を
+// ゲームマーケットに2013年秋に出展することとなりました。
+// その宣伝用の曲となります。
+// http://www.augurduel.com/
+//
+// タロットのイメージと曲は全くあっていない作りではありますが、
+// 古き良きタロットと新しいゲームというイメージを元に作曲しています。
+// そのためか、RPGっぽい曲になってしまっています。
+//
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+//
+//「アーガーデュエル」は致命的に面白いカードゲームです。
+// ゲームマーケット2013秋（11月4日） NEET有志タロットゲー事業部 卓番：423
+// 公式サイト http://www.augurduel.com/
+// （この曲の作者も会場にいます）
+//
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+//
+// 奨励音源
+// TiMidiTy
+// http://www.daiba.cx/TiMidity%2b%2b/
+// http://cdn.daiba.cx/f/TiMidiTy/Patches20131003/
+// http://pcdn.info/f/TiMidiTy/Patches20131003/
+//
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+Tempo 58
+//Tempo 120
+#a1={
+	l4
+	[2
+		Sub {r1 Expression.onTime(127,90,!2.)}
+		ed#ec
+		^2.^8r8
+		Expression(127)
+	]
+	dc#d<b>
+	c<b>c<a
+	Sub {r1 Expression.onTime(127,90,!2.)}
+	babg
+	a2.r8
+	Expression(127)
+	l32ab>cd
+	l4
+}
+
+#a2={
+	[2
+		Sub {r1 Expression.onTime(127,90,!2.)}
+		ed#ec
+		^2.^8r8
+		Expression(127)
+	]
+	dc#d<b>
+	c<b>c<a
+	Sub {r1 Expression.onTime(127,90,!2.)}
+	babg
+	a2.r4
+}
+
+#a3={
+	l16
+	q100
+	ef#ga q50 br>dr q100
+	l48c#dc#&c#16<l32brar l16 q50 brgr q100
+	Sub {l20abagf#} r4 l16 q50 grer q100
+	l16f#ed#e q50f#r<br>
+
+	q100
+	ef#ga q50 br>dr q100
+	l48c#dc#&c#16<l32brar l16 q50 brgr q100
+	Sub {l20abagf#} r4 l16 q50 gr>er q100
+	q50 c#rd#r errr
+}
+
+#a4={
+	q100
+	[2
+		l32
+		[3 e16d<a&a16b16> ] l16edc<b>
+	]
+	<
+	a#1
+	Sub {r4 Expression.onTime(127,90,!2)}
+	b2.r4
+	Sub {r1 Expression(127)}
+
+}
+
+#hp1={
+	Sub {
+		l34
+		[6 fcf ga>c ]
+	}
+	r1
+}
+#hp2={
+	Sub {
+		l24 [4 aed< ]
+		>>>>
+		l32 [4 aec# < ]
+	}
+	r1
+}
+
+#b1={
+	r1
+	o3
+	#hp1
+	r1
+	o3
+	#hp1
+	[3 r1]
+	o7
+	#hp2
+}
+#b2={
+	[2
+		l16
+		[2 r 'eb' 'b>e' 'eb' < ]
+		[1 r 'e>c#' 'c#e' 'ea' < ]
+		[1 r 'eb' 'b>e' 'eb' < ]
+		[2 r 'ea' 'a>e' 'ea' < ]
+		[2 r 'd#b' 'b>d#' 'd#b' < ]
+
+		[2 r 'eb' 'b>e' 'eb' < ]
+		[1 r 'e>c#' 'c#e' 'ea' < ]
+		[1 r 'eb' 'b>e' 'eb' < ]
+		[1 r 'ea' 'a>e' 'ea' < ]
+		[1 r 'eb' 'b>e' 'eb' < ]
+		'a>e<' r 'f#b' r 'eb' r rr
+	]
+}
+
+#c1={
+	l16
+	[2
+		c<aec>
+		c<g#ec>
+		c<aec>
+		c<aec>
+		[4 c<afc> ]
+	]
+	[4 <bgd<b>>]
+	[4 c<afc> ]
+	[4 <bgd<b>>]
+	[2 d<aed> ]
+	[2 c#<aec#> ]
+}
+
+#c2={
+	o4
+	l40
+	Tempo 59
+	f#a#>c#f#a#>c# f#c#<a#f#c#<
+	Tempo 58
+	a#>c#f#a#>c#f# a#f#c#<a#f#
+	Tempo 57
+	c#f#a#>c#f#a# >c#<a#f#c#<a#
+	Tempo 56
+	f#a#>c#f#a#>c# f#c#f#>c#f#a#
+
+	l52
+	Tempo 53
+	bag#f#ed#c#<
+	Tempo 51
+	bag#f#ed#c#<
+	Tempo 48
+	bag#f#ed#c#<
+	Tempo 46
+	bag#f#ed#c#<
+	Sub {Expression.onTime(127,90,!2.)}
+	Tempo 44
+	bag#f#ed#c#<
+	Tempo 40
+	l64 
+	b>d#f#
+	Tempo 35
+	b>d#f#
+	Tempo 30
+	b>d#f#
+	Tempo 20
+	b
+	Expression(127)
+}
+
+#d1={
+	l1
+	[2
+		'e>c<'
+		'ca'
+	]
+	'db'
+	'ca'
+	'dg'
+	Sub {d2c#2} e1
+}
+
+#d3={
+	l1
+	[2 'a>e<' ]
+	'a#>f#<'
+	Sub {Expression.onTime(127,90,!2.)}
+	'b2.>f#2.<'
+	r4
+	Expression(127)
+}
+
+#e1={
+	l1
+	[2
+		a
+		f
+	]
+	g
+	f
+	g
+	a
+}
+
+#e2={
+	[2
+		l16
+		[3
+			[2 errr ]
+		]
+		[2 <b>rrr ]
+		[3
+			[2 errr ]
+		]
+		f#rbr er<e>r
+	]
+}
+
+#e3={
+	l4
+	fedc fedc<
+	f#1
+	Expression.onTime(127,100,!2.)
+	b2.
+	r4
+	Expression(127)
+
+}
+
+TR(1)
+	音色(Piccolo)
+	v120
+	q100
+	o7
+	Tempo 58
+	#a1
+	Sub {r - 1 Tempo 59 r2 Tempo 60}
+	Tempo 60
+	Sub { [6 r1] Tempo 61 r1 Tempo 60 r4 Tempo 59 r8 Tempo 58 r8 Tempo 56 r8 Tempo 52 }
+	#a2
+	Sub {Tempo 53 r8 Tempo 55 r8 Tempo 58 r8 Tempo 60 r4 Tempo 61 r4 Tempo 62 r4 Tempo 63 }
+	Sub {[7 r1] Tempo 64 r8 Tempo 63 r8 Tempo 62 r16 Tempo 61 r16 Tempo 60 r16 Tempo 59 r16 Tempo 58 r16 Tempo 57 r16 Tempo 56 r16 Tempo 55 r16 Tempo 54 r16 Tempo 53 r16 Tempo 52 r16 Tempo 51 r16 Tempo 50 }
+	音色(Flute)
+	#a3
+	Tempo 65
+	音色(Piccolo)
+	#a3
+	o7
+	Tempo 58
+	q100
+	#a1
+	o7
+	Tempo 59
+	Sub { [2 r1] Tempo 55 r1 Tempo 54 r4 Tempo 52 r8 Tempo 50 r8 Tempo 47 r8 Tempo 45 }
+	#a4
+
+TR(2)
+	音色(Strings1)
+	v120
+	q100
+	o6
+	#a1
+	#a2
+	音色(Clarinet)
+	#a3
+	音色(Violin)
+	#a3
+	音色(Strings1)
+	o6
+	q100
+	#a1
+	o6
+	#a4
+
+TR(4)
+	音色(OrchestralHarp)
+	v60
+	[8 r1]
+	o3
+	#b1
+	音色(PizzicatoStrings)
+	v1000
+	o4
+	#b2
+	[8 r1]
+
+TR(5)
+	音色(OrchestralHarp)
+	v90
+	q100
+	o6
+	#c1
+	#c1
+	[8 r1]
+	o6
+	#c1
+	[2 r1]
+	#c2
+
+TR(6)
+	Expression.onNoteWave(127,100,!1)
+	音色(Strings2)
+	v100
+	q100
+	o5
+	#d1
+	#d1
+	[8 r1]
+	#d1
+	o4
+	#d3
+
+TR(9)
+	Expression.onNoteWave(127,100,!1)
+	音色(Contrabass)
+	v115
+	q100
+	o4
+	#e1
+	#e1
+	音色(PizzicatoStrings)
+	o3
+	#e2
+	音色(Contrabass)
+	o4
+	#e1
+	Expression(127)
+	o3
+	#e3
+
+/////////////////////////////////////////////////////////////////
+
+Time(37:1:0)
+
+Tempo 110
+
+Key(4)
+#melody1={
+	l8
+	r1
+	Expression(127)
+	q100
+	r2.q70g4q100>
+	e4.q80c q100<g4.q70e
+ 	f8.>e16 q100d4 rde q70f q100
+	f4.e16f16 g4 q80 d4 q100
+	Sub {r2 r8 Expression.onTime(127,100,!4) }
+	f2 e4.r >
+
+	Expression(127)
+	c4.<b16>c16 <b4q70e4 q100
+	a4.g16a16 g4 q70 c4 q100
+	f2^8<ab> q70 c q100
+	e4.f16e16 q60d4 q100 <g4>
+ 
+	//--
+	e4.q80c q100<g4.q70e
+ 	f8.>e16 q100d4 rde q70f q100
+	f4.e16f16 g4 q80 d4 q100
+	Sub {r2 r8 Expression.onTime(127,100,!4) }
+	f2 e4.r >
+
+	Expression(127)
+	c4.<b16>c16 <b4q70e4 q100
+	a4.g16a16 g4 q70 c4 q100
+	f2^8<ab> q70 c q100
+	e4.f16e16 q95d2
+
+	Sub {r1 Expression.onTime(127,80,!1) }
+	c1^1
+	Expression(127)
+}
+
+#melody1sub={
+	l8
+	q100
+	//--
+	c4.q80<g q100e4.q80c
+ 	d8.>c16 q100<b4 rb>c q70d q100
+	d4.c16d16 g4 q80 <b4> q100
+	d2 c4.r
+
+	a4.g16a16 g4q70<b4> q100
+	f4.e16f16 e4 q70 <g4> q100
+	c2^8<fg q70 a q100>
+	c2 q95d2
+	e1^1
+
+}
+
+#melody12sub={
+	o5
+	Sub {r1r1 Expression.onTime(127,50,!1) }
+	c1.d2e1^1
+}
+
+#melody2={
+	l8
+	q99
+	c2^cd-e-
+	f2^e-d-c<
+	b-2^b->cd
+	f4.e-4.<g8.r16
+	a-2^a-b->c
+	e-4.d4.e-8f8
+	g1
+
+	r2.e-d
+	c2^cd-e-
+	f2.r4<
+	b-2^b->cd
+	e-4.f4.g8.r16
+	a-2^ce-a-
+	g4.f4.e-4
+	f1
+	r2
+	
+}
+
+#cc1={
+	q40
+	l8[2 'eg>c<']
+	r q100l24[3 'eg>c<']
+	q40l8[4 'eg>c<']
+}
+
+#cd1={
+	q40
+	l8[2 'fa>d<']
+	r q100l24[3 'fa>d<']
+	q40l8[4 'fa>d<']
+}
+
+#cdm1={
+	q40
+	l8[2 'fa->d<']
+	r q100l24[3 'fa->d<']
+	q40l8[4 'fg>d<']
+}
+
+#cc2={
+	q40
+	l8[2 'eg>c<']
+	r q100l24[3 'eg>c<']
+	q40l8[2'eg>c<'][2 'eg#b']
+}
+
+#ca1={
+	q40
+	l8[2 'ea>c<']
+	r q100l24[3 'ea>c<']
+	q40l8[2'egb'][2 'egb']
+}
+
+#cf1={
+	q40
+	l8[2 'fa>c<']
+	r q100l24[3 'fa>c<']
+	q40l8[2'eg>c<'][2 'eg>c<']
+}
+
+#cf2={
+	q40
+	l8[2 'fa>c<']
+	r q100l24[3 'fa>c<']
+	q40l8[2'fa>c<'][2 'fa>c<']
+}
+
+#cfg1={
+	q40
+	l8[2 'fgb']
+	r q100l24[3 'fgb']
+	q40l8[2'fgb'][2 'fgb']
+}
+
+#cbg1={
+	q40
+	l8[2 'eg#b']
+	r q100l24[3 'eg#b']
+	q40l8[2'eg#b'][2 'eg#b']
+}
+
+#cab1={
+	q40
+	l8[2 'a->ce-<']
+	r q100l24[3 'a->ce-<']
+	q40l8[4'a->ce-<']
+}
+
+#cab2={
+	q40
+	l8[2 'a->d-f<']
+	r q100l24[3 'a->d-f<']
+	q40l8[4'a->d-f<']
+}
+
+#cab3={
+	q40
+	l8[2 'gb->df<']
+	r q100l24[3 'gb->df<']
+	q40l8[4'gb->df<']
+}
+
+#cab4={
+	q40
+	l8[2 'g>ce-<']
+	r q100l24[3 'g>ce-<']
+	q40l8[4'g>ce-<']
+}
+
+#cab5={
+	q40
+	l8[2 'a->df<']
+	r q100l24[3 'a->df<']
+	q40l8[4'a->df<']
+}
+
+#cab6={
+	q40
+	l8[2 'gb->e-<']
+	r q100l24[3 'gb->e-<']
+	q40l8[4'gb->e-<']
+}
+
+#cab7={
+	q40
+	l8[2 'a->ce-<']
+	r q100l24[3 'a->ce-<']
+	q40l8[4'a->ce-<']
+}
+
+#cab8={
+	q40
+	l8[2 'b->df<']
+	r q100l24[3 'b->df<']
+	q40l8[4'b->df<']
+}
+
+#cab9={
+	q40
+	l8[2 'gb>df<']
+	r q100l24[3 'gb>df<']
+	q40l8[4'gb>df<']
+}
+
+#back1={
+	[2 #cc1 ]
+	[2
+		#cc1
+		#cd1
+		#cdm1
+		#cc2
+		#ca1
+		#cf1
+		#cf2
+		#cfg1
+	]
+	[2 #cc1 ]
+}
+
+#back2={
+	#cab1
+	#cab2
+	#cab3
+	#cab4
+	#cab1
+	#cab5
+	[2 #cab6 ]
+
+	#cab1
+	#cab2
+	#cab3
+	#cab4
+	[2 #cab7]
+	#cab8
+	#cab9
+}
+
+#back3={
+	[2 #cc1 ]
+	Sub {r1 Expression.onTime(127,50,!1) }
+	q90'e1^1g1^1>c1^1<'
+}
+
+#bc1={
+	q50
+	l8[2 c ]
+	r q100l24[3 c]
+	q50l4 [2 c ]
+}
+
+#bc1={
+	q50
+	l8[2 c ]
+	r q100l24[3 c]
+	q50l4 [2 c ]
+}
+
+#bc2={
+	q50
+	l8[2 c ]
+	r q100l24[3 c]
+	q50l4c <b
+}
+
+#bae1={
+	q50
+	l8[2 a ]
+	r q100l24[3 a]
+	q50l4gg
+}
+
+#bfe1={
+	q50
+	l8[2 f ]
+	r q100l24[3 f]
+	q50l4ee
+}
+
+#bd1={
+	q50
+	l8[2 d ]
+	r q100l24[3 d]
+	q50l4dd
+}
+
+#bg1={
+	q50
+	l8[2 g ]
+	r q100l24[3 g]
+	q50l4gg>
+}
+
+#ba2={
+	q50
+	l8[2 a- ]
+	r q100l24[3 a-]
+	q50l4a-a-
+}
+
+#bg2={
+	q50
+	l8[2 g ]
+	r q100l24[3 g]
+	q50l4gg
+}
+
+#bc3={
+	q50>
+	l8[2 c ]
+	r q100l24[3 c]
+	q50l4cc
+	<
+}
+
+#bf2={
+	q50
+	l8[2 f ]
+	r q100l24[3 f]
+	q50l4ff
+}
+
+#bb2={
+	q50
+	l8[2 b- ]
+	r q100l24[3 b-]
+	q50l4b-b-
+}
+
+#be2={
+	q50
+	l8[2 e- ]
+	r q100l24[3 e-]
+	q50l4e-e-
+}
+
+#bass1={
+	[2 #bc1 ]
+	[2
+		[3 #bc1 ]
+		#bc2
+		#bae1
+		#bfe1
+		#bd1
+		#bg1
+	]
+	[2 #bc1 ]
+}
+
+#bass2={
+	<
+	[2 #ba2 ]
+	#bg2
+	#bc3
+	#bf2
+	#bb2
+	[2 #be2 ]
+
+	[2 #ba2 ]
+	#bg2
+	#bc3
+	[2 #ba2 ]
+	#bb2
+	#bg2
+}
+
+#bass3={
+	[2 #bc1 ]
+	Sub {r1 Expression.onTime(127,50,!1) }
+	q90c1^1
+}
+
+#harp1={
+	l12
+	Sub {cde l16 g>cde l20 g>cdeg >cdeg>c }
+	r1
+}
+
+#harp2={
+	l12
+	Sub { g>df l16 g>dfg l20 b>dfgb l24 >dfg>bdg }
+	r1
+	Sub { Expression.onTime(127,30,!1^1) r1 r1 r1 Expression(127)}
+	Sub {ege dc<g edc<ged c<ge dc<g edc <ged }
+}
+
+#harp3={
+	l12
+	Sub { Tempo 105 r2 Tempo 100 r2 Tempo 90 }
+	Sub { cde g>cd eg>c  l16 deg>c e28g28e28d28c28<g1 }
+	r1
+}
+
+TR(1)
+	Time(37:1:0)
+	[2
+		o4
+		v127
+		音色(Trumpet)
+		#melody1
+		音色(Violin)
+		#melody2
+		r2
+	]
+		o4
+		v127
+		音色(Trumpet)
+		#melody1
+
+TR(2)
+	Time(37:1:0)
+	[2
+		o5
+		音色(FrenchHorn)
+		[10 r1]
+		#melody1sub
+		[8 r1]
+		[8 r1]
+	]
+
+		o5
+		音色(FrenchHorn)
+		[10 r1]
+		#melody1sub
+		#melody12sub
+
+TR(8)
+	Time(37:1:0)
+	[2
+		o4
+		v85
+		音色(Strings2)
+		#back1
+		#back2
+	]
+		o4
+		v85
+		音色(Strings2)
+		#back1
+		#back3
+
+TR(7)
+	Time(37:1:0)
+	[2
+		o4
+		v85
+		音色(Strings1)
+		#back1
+		#back2
+	]
+		o4
+		v85
+		音色(Strings1)
+		#back1
+		#back3
+
+TR(9)
+	Time(37:1:0)
+	[2
+		o3
+		v125
+		音色(Contrabass)
+		#bass1
+		#bass2
+	]
+		o3
+		v125
+		音色(Contrabass)
+		#bass1
+		#bass3
+
+TR(14)
+	Time(37:1:0)
+	[2
+		o4
+		v100
+		音色(Contrabass)
+		#bass1
+		#bass2
+	]
+		o4
+		v100
+		音色(Contrabass)
+		#bass1
+		#bass3
+
+TR(6)
+	Time(37:1:0)
+	[2
+		v100
+		o4
+		音色(OrchestralHarp)
+		[2 r1]
+		[17 r1]
+		#harp1
+		[15 r1]
+		o3
+		#harp2
+	]
+		o4 r1
+		[18 r1]
+		[2 r1]
+		#harp3
+
+TR(10)
+	Time(37:1:0)
+	Key(0)
+	$b{n(Kick1),}
+	$s{n(Snare1),}
+	$S{n(Snare2),}
+	$c{n(CrashCymbal1),}
+	$y{n(CrashCymbal2),}
+	
+	#r1={
+		Sub {
+			Rythm {
+				 { b2 b4b4 }
+			}
+		}
+		Rythm {
+			s8s4 S24S24S24 s8S8s8S8
+		}
+	}
+
+	[2
+		[2 #r1 ]
+		[8 #r1 ]
+		Sub { Rythm { c1 } }
+		[8 #r1 ]
+		[2 #r1 ]
+
+		Sub { Rythm { y1 } }
+		[8 #r1 ]
+		[8 #r1 ]
+	]
+
+	[1
+		[2 #r1 ]
+		[8 #r1 ]
+		Sub { Rythm { c1 } }
+		[8 #r1 ]
+		[2 #r1 ]
+	]
+	[1
+		Sub { Rythm { c1 } }
+		[2 #r1 ]
+	]
+
+
+End
+
+##############################################################################
+#
+# TiMidiTy++ Config (v2.0)
+
+dir ../patches/guspat/izumo/inst/GUS
+dir ../patches/guspat/izumo/inst/GUS/gsdrum00
+dir ../patches/guspat/izumo/inst/GUS/gsdrum08
+dir ../patches/guspat/izumo/inst/GUS/gsdrum25
+dir ../patches/guspat/izumo/inst/GUS/gsdrum40
+dir ../patches/guspat/izumo/inst/GUS/power
+dir ../patches/guspat/izumo/inst/gusperc
+dir ../patches/guspat/izumo/inst/mazpat
+dir ../patches/guspat/izumo/inst/misc
+dir ../patches/guspat/izumo/inst/orchhit-patch
+dir ../patches/guspat/izumo/inst/release	
+dir ../patches/guspat/izumo/inst/roland
+dir ../patches/guspat/izumo/inst/wime
+dir ../patches/guspat/izumo/inst/wowpats
+dir ../patches/guspat/izumo/inst
+dir ../patches/guspat/izumo
+dir ../patches/sf2_part/piano
+dir ../patches/sf2_all/Titanic
+dir ../patches/sf2_part/famicom
+dir ../patches/sf2_part/drumkit
+dir ../patches/sf2_all/realgs
+dir ../patches/sf2_all/atomic
+dir ../patches/sf2_all/fluid3
+dir ../patches/sf2_all/ultimate
+dir ../patches/sf2_all/GMRBasico
+dir ../patches/sf2_all
+
+dir ../patches/arukana
+
+source default.cfg
+source gsdrum.cfg
+source gsdrum25.cfg
+source sfx.cfg
+source mt32.cfg
+source power.cfg
+source release.cfg
+
+##############################################################################
+# End of configuration file
+
+
+
+bank 0
+	# trumpet
+#	56 trombone.pat amp=250 keep=loop rate=240:10:5:120:120:120 offset=255:200:150 vibrato=0:0:0
+	56 %font FluidR3GM.SF2 0 57 amp=100 keep=loop rate=240:10:5:120:120:120 offset=255:200:150 vibrato=0:0:0
+
+	# string1
+	48 %font Titanic_200_GMGS_1.2.sf2 0 48 amp=160
+	49 %font Titanic_200_GMGS_1.2.sf2 0 48 amp=120
+
+	# violin
+#	40 %font atomic.sf2 0 41 amp=170 pan=0 keep=loop rate=255:40:20:105:105:100 offset=255:200:150 tune=+0
+	40 %font atomic.sf2 0 41 amp=180 pan=0 keep=loop
+
+	# tr.string
+	44 %font Titanic_200_GMGS_1.2.sf2 0 44 amp=150 keep=loop rate=255:1:1:120:120:120 offset=255:250:250
+
+	# pizz
+	45 %font "GMR Basico1.1.sf2" 0 45 amp=50 keep=loop
+	44 %font Titanic_200_GMGS_1.2.sf2 0 45 amp=180 keep=loop
+
+	# harp
+	46 %font "GMR Basico1.1.sf2" 0 46 amp=110 rate=255
+
+	# horn
+	60 %font Titanic_200_GMGS_1.2.sf2 0 60 amp=120
+
+	# piccoro
+	72 %font atomic.sf2 0 72 amp=120 tune=+0 rate=::230:230:230
+
+	# clarinet
+	71 %font atomic.sf2 0 71 amp=70 tune=+0 rate=::230:230:230
+
+	# contra
+	43 %font Titanic_200_GMGS_1.2.sf2 0 49 amp=130 rate=255
+
+	# timpany
+	47 %font Titanic_200_GMGS_1.2.sf2 0 47 amp=300 rate=255 tune=+12
+
+
+##############################################################################
+# Standard drums
+
+drumset 0
+
+	# bd
+	36 %font Titanic_200_GMGS_1.2.sf2 128 48 36 amp=300
+
+	# sd
+	38 %font Titanic_200_GMGS_1.2.sf2 128 0 40 amp=160
+	40 %font Titanic_200_GMGS_1.2.sf2 128 0 40 amp=90y
+
+	# cymbal
+	49 %font Titanic_200_GMGS_1.2.sf2 128 48 55 amp=400 pan=+70 tune=+0
+
+
+	# Side cymbal
+	57 %font Titanic_200_GMGS_1.2.sf2 128 48 55 amp=400 pan=-20 tune=+0
+
+

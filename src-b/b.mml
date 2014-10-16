@@ -1,0 +1,1583 @@
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+//
+// 「アーガーデュエル　テーマソング　Endless Duel」
+//
+// 作詞：yuk氏、青い鴉氏
+// 作曲：青い鴉氏、ななこっち★（なの）
+// 動画：ななこっち★（なの）
+// 出演：青い鴉氏、soiya氏
+// 歌　：初音ミク IA
+// 著作者：NEET有志
+// MMLかき：ななこっち★（なの）
+// ライセンス：転載可、改変可（歌詞等除く）
+//
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+//
+// タロットカードをモチーフにした、カードゲーム「アーガーデュエル」を
+// ゲームマーケットに2013年秋に出展することとなりました。
+// その宣伝用の曲となります。
+// http://www.augurduel.com/
+//
+// タロットのイメージと曲は全くあっていない作りではありますが、
+// 古き良きタロットと新しいゲームというイメージを元に作曲しています。
+// そのためか、RPGっぽい曲になってしまっています。
+//
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+//
+//「アーガーデュエル」は致命的に面白いカードゲームです。
+// ゲームマーケット2013秋（11月4日） NEET有志タロットゲー事業部 卓番：423
+// 公式サイト http://www.augurduel.com/
+// （この曲の作者も会場にいます）
+//
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+//
+// 奨励音源
+// TiMidiTy
+// http://www.daiba.cx/TiMidity%2b%2b/
+// http://cdn.daiba.cx/f/TiMidiTy/Patches20131003/
+// http://pcdn.info/f/TiMidiTy/Patches20131003/
+//
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+//
+// メロディーを出力
+Int MELODY=1
+//
+// 伴奏を出力
+Int BACK=1
+//
+// メロディーをカラオケにする
+Int KARAOKE=0
+//
+// 楽譜を出力する
+Int GAKUHU=0
+//
+//
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+Tempo 118
+
+#PEDALON={Sub {r16y64,127}}
+#PEDALOFF={r-32 y64,0 r32}
+
+Function Fadeout(Mes){
+	Expression.onTime(127,0,!1^1)
+}
+
+IF(MELODY=1) {
+	// メロディー
+
+	TR(1)
+		拍子 4,4
+		v127
+		IF(KARAOKE=1) {
+			音色(Vibraphone)
+			Key(12)
+		} ELSE {
+			Voice(AltoSax)
+		}
+		o5
+		IF(GAKUHU=1) {
+			q100
+		} ELSE {
+			q90
+		}
+		l16
+		//////////////////////////////////////
+		// c
+		//あるかな
+		g>c<b>c&c8r8
+		//c
+		//かみにえ
+		l8c<bag
+		// em
+		//らばれし
+		ggeg
+		//em
+		//ぐしゃよ
+		IF(GAKUHU=1) {
+			eg4a16&a16
+		} ELSE {
+			eg4a16r16
+		}
+		// F
+		//さだめの
+		b>ccc
+		//G
+		//わをやぶれ
+		IF(GAKUHU=1) {
+			dc<b16b16>c16&c16<
+		} ELSE {
+			dc<b16b16>c16r16<
+		}
+		//A
+		//えんど  れ す でゅ え る
+		IF(GAKUHU=1) {
+			b8.   b16 q100 a16a16a16a16&a4.^16 &a16 q100
+		} ELSE {
+			b8.   b16 q100 a16a16a16a16&a4.^16 a16 q90
+		}
+
+		r1r1r1r1
+		//////////////////////////////////////
+		l16
+		// Em
+		// それは　  うら な    い    のひ
+		IF(KARAOKE=1 || GAKUHU=1) {
+			eee8       ree8  g8.   fe  df8
+		} ELSE {
+			eee8       ree8  g8.   f&e  df8
+		}
+		// ふたりの  きょうこう みた ゆめ
+		IF(KARAOKE=1 || GAKUHU=1) {
+			eeee         ded8       c8c8 d8f8 //c8dd& ddf8
+		} ELSE {
+			eeee         d&ed8       c8c8 d8fr //c8dd& ddf8
+		}
+		//たいようと　つきか さなるとき
+		eeee      e8r8        eeee   eeee
+
+	    //あくまがめざめる
+		IF(GAKUHU=1) {
+			d8cd& d8e8 f8e8d8f16&f16
+		} ELSE {
+	    		d8cd& d8e8 f8e8d8f16r16
+		}
+		
+		//つるされた いん　じゃ は
+		IF(KARAOKE=1 || GAKUHU=1) {
+			eeee e8r8      g8.fed f&f
+		} ELSE {
+			eeee e8r8      g8.f&e&d fr
+		}
+		// るーんを　もとめて まじゅつしに
+		IF(GAKUHU=1) {
+			e8.e         eded     ccdd      f8.&f16
+		} ELSE {
+			e8.e         eded     ccdd      f8.r16
+		}
+			
+		//しにがみ はだれに
+		l8eeee     aede
+
+		//ほほえむ   のだろう
+		dcde         f f16e16&e8 &e8
+		IF(GAKUHU=1) {
+			拍子 4,4
+			^8 r4 r2
+			e>
+		} ELSE {
+			拍子 2,4
+			^8 r4
+			e>
+			拍子 4,4
+		}
+
+		//////////////////////////////////////
+		//にひゃくねんの
+		cc<b8g16e16^4r8
+		//むかしのはなし
+		e16g16
+		aag8e16c16^4r8
+
+		//ある「にん」げんが
+		//
+		c
+		f4.ef4.g
+		//けいじをうけた
+		aa16a16 ag# g#4r8
+
+		//「さん」びゃくねんの
+		e>
+		cc<bg16e16^4r8
+		// 
+		//みらいのはなし
+		e16g16
+		aage16c16 ^4 r8
+
+		//うらないはたたかいとなる
+
+		f
+		f  f   g  a16>c16^8<aa>c
+		IF(KARAOKE=1 || GAKUHU=1) {
+			<baga8^2^2
+		} ELSE {
+			<ba&ga8^2^2
+		}
+
+	r2
+
+
+		//////////////////////////////////////
+		o5
+		IF(GAKUHU=1) {
+			q100
+		} ELSE {
+			q90
+		}
+		l16
+		// c
+		//あるかな
+		g>c<b>c&c8r8
+		//c
+		//しんぱん
+		l8c<bag
+		// em
+		//のひはも
+		ggeg
+		//em
+		//ちかい　せ
+		e16e16g8r8a
+
+		// F
+		//かいのしゅ
+		b>ccc
+		//G
+		//ばんをすくえ
+		IF(GAKUHU=1) {
+			d16d16c<b16b16>c16&c16<
+		} ELSE {
+			d16d16c<b16b16>c16r16<
+		}
+		//A
+		//えんど  れ す でゅ え る
+		IF(GAKUHU=1) {
+			b8.   b16 q100 a16a16a16a16&a4.^16 &a16 q100
+		} ELSE {
+			b8.   b16 q100 a16a16a16a16&a4.^16 a16 q90
+		}
+		
+		r1r1r1r1
+		//////////////////////////////////////
+		l16
+		// Em
+		// それは　  うら な    い    のひ
+		IF(KARAOKE=1 || GAKUHU=1) {
+			eee8        ree8  g8.   fe  df8
+		} ELSE {
+			eee8        ree8  g8.   f&e  df8
+		}
+		// ふたりの  きょうこう みた ゆめ
+		IF(KARAOKE=1 || GAKUHU=1) {
+			eeee         ded8       c8c8 d8f8 //c8dd& ddf8
+		} ELSE {
+			eeee         d&ed8       c8c8 d8fr //c8dd& ddf8
+		}
+
+		//せせい　の　　　　ひびはお　わり　こ
+		eree      e8r8      eeee   ee8e
+
+	    //いびと　ひ　きさかれる
+		IF(GAKUHU=1) {
+			d8cd& d8e8 f8e16e16d8fr
+		} ELSE {
+			d8cd& d8e8 f8e16e16d8fr
+		}
+
+		//うなりご　え　あげるせしゃ
+		eeee e8r8   g8fe8d f8
+
+		// ちからだ　けがこの　よのすべ　て
+		IF(GAKUHU=1) {
+			eeee         eded     ccdd      f8.&f
+		} ELSE {
+			eeee         eded     ccdd      f8.r
+		}
+		//正義はどこにあるのだろう？
+		//せいげいは　どこに
+		l8eeee     a8.e8.e8
+
+		//あるの　だろお
+		dcde         f&f16e16&e8 &e8
+		IF(GAKUHU=1) {
+			拍子 4,4
+			^8 r4 r2
+			e>
+			拍子 4,4
+		} ELSE {
+			拍子 2,4
+			^8 r4
+			e>
+			拍子 4,4
+		}
+
+		//////////////////////////////////////
+		//にひゃくねんの
+		cc<b8g16e16^4r8
+		//むかしのはなし
+		e16g16
+		aag8e16c16^4r8
+
+		//ある「にん」げんが
+		//
+		c
+		f4.ef4.g
+		//けいじをうけた
+		aa16a16 ag# g#4r8
+
+		//「さん」びゃくねんの
+		e>
+		cc<bg16e16^4r8
+		// 
+		//みらいのはなし
+		e16g16
+		aage16c16 ^4 r8
+
+		//うらないはたたかいとなる
+
+		f
+		f  f   g  a16>c16^8<aa>c
+		IF(KARAOKE=1 || GAKUHU=1) {
+			<baga8^2^2>
+		} ELSE {
+			<ba&ga8^2^2>
+		}
+
+		<
+	r2
+		//////////////////////////////////////
+		l16
+		// c
+		//あるかな
+		g>c<b>c&c8r8
+		//xc
+		// ぜつぼ
+		l8rc<bg&
+		//のとかけ
+		ggeg16g16
+		//ぬけて　　き
+		g8g16a16r8.a16
+		//ぼのほ
+		>c8.c8.c8
+		//しをつかめ
+		d8c8<b16b16>c16r16<
+		//えんど  れ す でゅ え る
+		IF(GAKUHU=1) {
+			b8.   b16 q100 a16a16a16a16&a4^16 & a16 q100 r8
+		} ELSE {
+			b8.   b16 q100 a16a16a16a16&a4^16 a16 q90 r8
+		}
+
+		//////////////////////////////////////
+		Sub {
+			l16
+			// c
+			//あるかな
+			g>c<b>c&c8r8
+			//c
+			//かみにえ
+			l8c<bag
+			// em
+			//らばれし
+			ggeg
+			//em
+			//ぐしゃよ
+			eg4a16r16
+
+			// F
+			//さだめの
+			b>c
+			cc
+			//G
+			//わをやぶれ
+			d
+			c<
+			b16b16
+			>c16r16<
+			//A
+			//えんど  れ す でゅ え る
+			IF(GAKUHU=1) {
+				b8.   b16 q100 a16a16a16a16&a4.^16 &a16 q90
+			} ELSE {
+				b8.   b16 q100 a16a16a16a16&a4.^16 a16 q90
+			}
+		}
+		Tempo 117
+		r2
+		Tempo 116
+		r2
+		Tempo 115
+		r4
+		Tempo 114
+		r4
+		//
+		Tempo 112
+		r4
+		Tempo 110
+		r4
+		Tempo 108
+		r4
+		Tempo 106
+		r4
+		//
+		Tempo 104
+		r8
+		Tempo 102
+		r8
+		Tempo 100
+		r12
+		Tempo 98
+		r12
+		Tempo 96
+		r12
+		Tempo 94
+		r12
+		Tempo 92
+		r12
+		Tempo 90
+		r12
+		//
+		Tempo 88
+		r16
+		Tempo 86
+		r16
+		Tempo 84
+		r16
+		Tempo 82
+		r16
+		Tempo 80
+		r16
+		Tempo 78
+		r16
+		Tempo 76
+		r16
+		Tempo 74
+		r16
+		Tempo 72
+		r1
+		Tempo 70
+		r16
+		Tempo 68
+		r16
+		Tempo 66
+		r16
+		Tempo 64
+		r16
+		Tempo 62
+		r16
+		Tempo 60
+		r16
+
+	Key(0)
+	// デュエットメロディー
+	TR(2)
+		IF(GAKUHU=0) {
+			v90
+			IF(KARAOKE=1) {
+				Key(12)
+				音色(Vibraphone)
+			} ELSE {
+				Voice(AltoSax)
+			}
+			o5
+			q90
+			l16
+			//////////////////////////////////////
+			[4 r1]
+			[4 r1]
+
+			//////////////////////////////////////
+			[8 r1]
+			r2
+			//////////////////////////////////////
+			[9 r1]
+
+			//////////////////////////////////////
+			[8 r1]
+			r2
+			[8 r1]
+			l8
+			//////////////////////////////////////
+			//にひゃくねんの
+			
+			aag8e16<b16^4r8>
+			//むかしのはなし
+			e16e16
+			ffe8c16<g16^4r8>
+
+			//ある「にん」げんが
+			//
+			c<
+			a4.aa4.a>
+			//けいじをうけた
+			ff16f16 fe e4r8
+
+
+			//「さん」びゃくねんの
+			e
+			aage16<b16^4r8>
+			// 
+			//みらいのはなし
+			e16e16
+			ffec16<g16 ^4 r8
+
+			//うらないはたたかいとなる
+			a
+			a  a   b  >c16f16^8fff
+			IF(KARAOKE=1) {
+				gfe16d16c#8^2r2>
+			} ELSE {
+				gf&e16&d16c#8^2r2>
+			}
+	}
+}
+
+	Key(0)
+
+IF(BACK=1) {
+	// サブメロディー
+	TR(4)
+		v110q95
+		Voice(Violin)
+		o6
+		[4 r1]
+		[3 l16 a8ed &dde8 ]
+		>c8<b8a8g8
+		[3 l16 a8ed &dde8 ]
+		l20 >c<bagf l4e4
+
+		[8 r1]
+		l20
+		Voice(Viola)
+		Sub {<g#ab>cde4 }
+		Sub{g#ab>cde4}
+		g#ab>cde4<
+		[8 r1]
+		c8<b8>c8d8
+		c4<b4
+
+		//////////////////////////////////////
+		Voice(Violin)
+		[4 r1]
+		[3 l16 a8ed &dde8 ]
+		>c8<b8a8g8
+		[3 l16 a8ed &dde8 ]
+		l20 >c<bagf l4e4
+
+ 		[8 r1]
+		l28
+		Voice(Viola)
+		Sub {<ef#g#ab>cde4 }
+		Sub {ef#g#ab>cde4 }
+		Sub {ef#g#ab>cd }r4e4<
+		[8 r1]
+		c8<b8>c8d8
+		c4<b4
+
+	// サブメロディー２
+	TR(5)
+		v110q100
+		Voice(Cello)
+		o6
+		[4 r1]
+		[3 l16 a8ed &dde8 ]
+		>c8<b8a8g8
+		[3 l16 a8ed &dde8 ]
+		l20 >c<bagf l4e4
+
+		[8 r1]
+		l20
+		Voice(Contrabass)
+		Sub {<g#ab>cde4 }
+		Sub{g#ab>cde4}
+		g#ab>cde4<
+		[8 r1]
+		c8<b8>c8d8
+		c4<b4
+
+		//////////////////////////////////////
+		Voice(Cello)
+		[4 r1]
+		[3 l16 a8ed &dde8 ]
+		>c8<b8a8g8
+		[3 l16 a8ed &dde8 ]
+		l20 >c<bagf l4e4
+
+ 		[8 r1]
+		l28
+		Voice(Contrabass)
+		Sub {<ef#g#ab>cde4 }
+		Sub {ef#g#ab>cde4 }
+		Sub {ef#g#ab>cd }r4e4<
+		[8 r1]
+		c8<b8>c8d8
+		c4<b4
+
+	// ピアノ
+		//////////////////////////////////////
+	TR(6)
+		l1
+		v110
+		q100
+		音色(GrandPiano)
+		'ceg>e<'
+		'<b>eg>e<'
+		l2
+		'cfa>e<'
+		'<b>eg#>d<'
+		Sub{l1'e&ea&a'}
+		>d2c#2<
+
+		//////////////////////////////////////
+		l4
+		<
+		[2 'fa>e<']
+		[2 'eg#>d<']
+		[2 'ea>d<']
+		[2 'ea>c<']
+		[2 'fa>e<']
+		[2 'eg#>d<']
+		[2 'ea>d<']
+		[2 'ea>c<']
+
+		//////////////////////////////////////
+		[4 'gb>e<']
+		[4 'g>ce<']
+		[4 'ad>f#<']
+		[4 'ad>f<']
+		[4 'gb>e<']
+		[4 'g>ce<']
+		[4 'ad>f#<']
+		[4 'ad>f<']
+		>
+		#PEDALON <b32>d32e32g#32 b4. #PEDALOFF
+
+		//////////////////////////////////////
+		[2 'cea' ] [2 '<b>eg' ]
+		[2 'cfa' ] [2 'ceg' ]
+		[4 'cfa' ]
+		[2 'dea' ] [2 'deg#' ]
+
+		[2 'cea' ] [2 '<b>eg' ]
+		[2 'cfa' ] [2 'ceg' ]
+		[4 'cfa' ]
+		[2 '<b>dg' ] [2 'c#ea' ]
+		[2 'cfa' ] [2 '<b>dg' ]
+
+		//////////////////////////////////////
+		[4 'ceg' ]
+		[4 '<b>eg' ]
+		[2 'cfa' ] [2 'deg#' ]
+		[2 'dea' ] [2 'c#ea' ]
+		<
+		//////////////////////////////////////
+		l4
+		[2 'fa>e<']
+		[2 'eg#>d<']
+		[2 'ea>d<']
+		[2 'ea>c<']
+		[2 'fa>e<']
+		[2 'eg#>d<']
+		[2 'ea>d<']
+		[2 'ea>c<']
+
+		//////////////////////////////////////
+		[4 'gb>e<']
+		[4 'g>ce<']
+		[4 'ad>f#<']
+		[4 'ad>f<']
+		[4 'gb>e<']
+		[4 'g>ce<']
+		[4 'ad>f#<']
+		[4 'ad>f<']
+		>
+		#PEDALON <b32>d32e32g#32 b4. #PEDALOFF
+
+		//////////////////////////////////////
+		[2 'cea' ] [2 '<b>eg' ]
+		[2 'cfa' ] [2 'ceg' ]
+		[4 'cfa' ]
+		[2 'dea' ] [2 'deg#' ]
+
+		[2 'cea' ] [2 '<b>eg' ]
+		[2 'cfa' ] [2 'ceg' ]
+		[4 'cfa' ]
+		[2 '<b>dg' ] [2 'c#ea' ]
+		[2 'cfa' ] [2 '<b>dg' ]
+
+
+		//////////////////////////////////////
+		l1
+		q100
+		音色(GrandPiano)
+		l1
+		'ceg>e<'
+		'<b>eg>e<'
+		l2
+		'cfa>e<'
+		'<b>eg#>d<'
+		Sub{l2.'e&ea&a'}
+		>d2c#4<
+//		l4'fgb>d<'
+		r4
+
+		l4
+		[4 'ceg' ]
+		[4 '<b>eg' ]
+		[2 'cfa' ] [2 'deg#' ]
+		[2 'dea' ] [2 'c#ea' ]
+
+	// ストリング＆ギター
+
+		//////////////////////////////////////
+	TR(7)
+		l1
+		v110
+		Voice(Strings1)
+		q100
+		'ceg>e<'
+		'<b>eg>e<'
+		l2
+		'cfa>e<'
+		'<b>eg#>d<'
+		Sub { r2 Fadeout(0.5) }
+		Sub{l1'e&ea&a'}
+		>d2c#2<
+		v110
+		Expression(127)
+		//////////////////////////////////////
+		音色(NylonGuitar)
+		l16
+		[2
+			[2 #PEDALON aece #PEDALOFF ]
+			[2 #PEDALON g#ede #PEDALOFF ]
+			[4 #PEDALON aece #PEDALOFF ]
+		]
+
+		//////////////////////////////////////
+		[4 #PEDALON be<b>e #PEDALOFF ]
+		[4 #PEDALON gc<g>c #PEDALOFF ]
+		[4 #PEDALON ad<a>d #PEDALOFF ]
+		[4 #PEDALON ad<a>d #PEDALOFF ]
+
+		[4 #PEDALON be<b>e #PEDALOFF ]
+		[4 #PEDALON gc<g>c #PEDALOFF ]
+		[4 #PEDALON ad<a>d #PEDALOFF ]
+		[4 #PEDALON ad<a>d #PEDALOFF ]
+		#PEDALON <b32>d32e32g#32 b4. #PEDALOFF
+
+		//////////////////////////////////////
+		l8
+		[2 #PEDALON 'ea'c #PEDALOFF ]
+		[2 #PEDALON 'eg'<b> #PEDALOFF ]
+		[2 #PEDALON 'fa'c #PEDALOFF ]
+		[2 #PEDALON 'eg'c #PEDALOFF ]
+		[4 #PEDALON 'fa'c #PEDALOFF ]
+		[2 #PEDALON 'ea'd #PEDALOFF ]
+		[2 #PEDALON 'eg#'d #PEDALOFF ]
+
+		[2 #PEDALON 'ea'c #PEDALOFF ]
+		[2 #PEDALON 'eg'<b> #PEDALOFF ]
+		[2 #PEDALON 'fa'c #PEDALOFF ]
+		[2 #PEDALON 'eg'c #PEDALOFF ]
+		[4 #PEDALON 'fa'c #PEDALOFF ]
+		[2 #PEDALON 'dg'<b> #PEDALOFF ]
+		[2 #PEDALON 'ea'c# #PEDALOFF ]
+		[2 #PEDALON 'fa'c #PEDALOFF ]
+		[2 #PEDALON 'dg'<b> #PEDALOFF ]
+
+		//////////////////////////////////////
+		[4 #PEDALON 'eg'c #PEDALOFF ]
+		[4 #PEDALON 'eg'<b> #PEDALOFF ]
+		[2 #PEDALON 'fa'c #PEDALOFF ]
+		[2 #PEDALON 'eg#'d #PEDALOFF ]
+		[2 #PEDALON 'ea'd #PEDALOFF ]
+		[2 #PEDALON 'ea'c# #PEDALOFF ]
+
+		//////////////////////////////////////
+		l16
+		[2
+			[2 #PEDALON aece #PEDALOFF ]
+			[2 #PEDALON g#ede #PEDALOFF ]
+			[4 #PEDALON aece #PEDALOFF ]
+		]
+
+		//////////////////////////////////////
+		[4 #PEDALON be<b>e #PEDALOFF ]
+		[4 #PEDALON gc<g>c #PEDALOFF ]
+		[4 #PEDALON ad<a>d #PEDALOFF ]
+		[4 #PEDALON ad<a>d #PEDALOFF ]
+
+		[4 #PEDALON be<b>e #PEDALOFF ]
+		[4 #PEDALON gc<g>c #PEDALOFF ]
+		[4 #PEDALON ad<a>d #PEDALOFF ]
+		[4 #PEDALON ad<a>d #PEDALOFF ]
+		#PEDALON <b32>d32e32g#32 b4. #PEDALOFF
+
+		//////////////////////////////////////
+		l8
+		[2 #PEDALON 'ea'c #PEDALOFF ]
+		[2 #PEDALON 'eg'<b> #PEDALOFF ]
+		[2 #PEDALON 'fa'c #PEDALOFF ]
+		[2 #PEDALON 'eg'c #PEDALOFF ]
+		[4 #PEDALON 'fa'c #PEDALOFF ]
+		[2 #PEDALON 'ea'd #PEDALOFF ]
+		[2 #PEDALON 'eg#'d #PEDALOFF ]
+
+		[2 #PEDALON 'ea'c #PEDALOFF ]
+		[2 #PEDALON 'eg'<b> #PEDALOFF ]
+		[2 #PEDALON 'fa'c #PEDALOFF ]
+		[2 #PEDALON 'eg'c #PEDALOFF ]
+		[4 #PEDALON 'fa'c #PEDALOFF ]
+		[2 #PEDALON 'dg'<b> #PEDALOFF ]
+		[2 #PEDALON 'ea'c# #PEDALOFF ]
+		[2 #PEDALON 'fa'c #PEDALOFF ]
+		[2 #PEDALON 'dg'<b> #PEDALOFF ]
+
+		//////////////////////////////////////
+		[4 r1]
+//		音色(NylonGuitar)
+//		#PEDALON Sub {d48f48g48b48} r4 #PEDALOFF
+//		l4'dfgb'
+//		r4
+
+		//////////////////////////////////////
+		音色(NylonGuitar)
+		l8
+		[4 #PEDALON 'eg'c #PEDALOFF ]
+		[4 #PEDALON 'eg'<b> #PEDALOFF ]
+		[2 #PEDALON 'fa'c #PEDALOFF ]
+		[2 #PEDALON 'eg#'d #PEDALOFF ]
+		[2 #PEDALON 'ea'd #PEDALOFF ]
+		[2 #PEDALON 'ea'c# #PEDALOFF ]
+
+	// ベース
+		//////////////////////////////////////
+	TR(9)
+		音色(Strings2)
+		v110
+		l1
+		q100
+		o4
+		c<
+		e
+		f2e2
+		a1
+
+		//////////////////////////////////////
+		音色(AcousticBass)
+		l4
+		ffee
+		aagg
+		ffee
+//		aaaa
+		aa[5 a20] a8r8
+
+		//////////////////////////////////////
+		eeee
+		cccc
+		dddd<
+		bbbb>
+
+		eeee
+		cccc
+		dddd<
+		bbbb>
+
+		v100
+		Sub { l28 ef#g#ab>cd } r4 e8r8 <
+		v110
+		l4
+		//////////////////////////////////////
+		aaee
+		ffcc
+		dddd<
+		bb>ee16e16e16e16
+
+		aaee
+		ffcc
+		ffff
+		ggaa
+		f4.e16f16g<g>
+
+		//////////////////////////////////////
+		cccc
+		eeee
+		ffee
+		a4.a8a4<a4>
+
+		//////////////////////////////////////
+		ffee
+		aagg
+		ffee
+		aaaa
+
+		//////////////////////////////////////
+		eeee
+		cccc
+		dddd<
+		bbbb>
+
+		eeee
+		cccc
+		dddd<
+		bbbb>
+
+		v100
+		Sub { l28 ef#g#ab>cd } r4 e8r8 <
+		v110
+		l4
+		//////////////////////////////////////
+		l8
+		a4.ae4.e
+		f4.fc4.c
+		d4.dd4.d<
+		b4.b>ee e16e16e16e16
+		a4.ae4.e
+		f4.fc4.c
+		f4.ff4.f
+		g4.f16g16 a4<a4>
+		f4.e16f16g4<g4>
+
+IF(0){
+		aaee
+		ffcc
+		dddd<
+		bb>ee
+		aaee
+		ffcc
+		ffff
+		ggaa
+		f4.e16f16g<g>
+}
+		//////////////////////////////////////
+		音色(Strings2)
+		l1
+		q100
+		o4
+		c<
+		e
+		f2e2
+		a2.g4
+
+		//////////////////////////////////////
+		l1
+		c
+		e
+		f2e2
+		a1
+		Sub { Fadeout(1) }
+		<a1>
+//		Expression(127)
+
+	// ハープ
+	TR(11)
+		//////////////////////////////////////
+		v110
+		音色(OrchestralHarp)
+		[3 r1] r2
+		o3 l24a>de a>de a>de l32a>dea
+		[4 r1]
+		[8 r1] r2
+		[9 r1]
+		[3 r1]r2
+		o3 l24a>de a>de a>de l32a>dea
+		[4 r1]
+		[8 r1] r2
+		[9 r1]
+		[3 r1]r2.
+		o4 l40g>dfgb d>gb>fg
+		>c1
+		[2 r1]r2
+		o3 l20a>dea>d ea>dea > 
+		e32a32e32d32<a32e32<a1
+
+	// サブストリング
+		//////////////////////////////////////
+#substrings={
+		v100
+		o7q100
+		[3 r1] r2
+		r2
+		[4 r1]
+		[8 r1] r2
+		[9 r1]
+		Sub {
+			<
+			e1^1
+			'<a2>f2''<g#2>e2'
+			'c1.a1.'
+			'<b2>g#2'
+			'c1.a1.''<b2>g#2'
+			Sub { Fadeout(1) }
+			'c1a1'
+			>
+		}
+		e1^1
+		'<a2>f2''<g#2>e2'
+		'c1.a1.'
+		'<b2>g#2'
+		'c1.a1.''<b2>g#2'
+		Sub { Fadeout(1) }
+		'c1a1'
+		Expression(127)
+		>
+
+		v100
+		[8 r1] r2
+		[9 r1]
+
+		l1
+//		Voice(Strings1)
+		o5
+		q100
+		'ceg>e<'
+		'<b>eg>e<'
+		l2
+		'cfa>e<'
+		'<b>eg#>d<'
+		Sub{l2.'e&ea&a'}
+		>d2c#4<
+		'f4g4b4>d4<'
+		l1
+		'ceg>e<'
+		'<b>eg>e<'
+		l2
+		'cfa>e<'
+		'<b>eg#>d<'
+		Sub { r2 Fadeout(1) }
+		Sub{l2.'e&e^1a&a^1'}
+		>d2c#4^1<
+//		Expression(127)
+	}
+	TR(12)
+		Voice(WarmPad)
+		#substrings
+
+	TR(13)
+		Voice(PolySynthPad)
+		#substrings
+
+	// ドラム
+		//////////////////////////////////////
+	TR(10)
+		音色(StandardSet)
+
+		v127
+		$b{n(Kick1),}
+		$s{n(Snare1),}
+		$p{n(PedalHiHat),}
+		$o{n(OpenHiHat),}
+		$h{n(ClosedHiHat),}
+		$r{n(RideCymbal1),}
+		$r{n(RideBell),}
+		$y{n(CrashCymbal2),}
+		$c{n(CrashCymbal1),}
+		$t{n(Tambourine),}
+		$L{n(BellTree),}
+		$k{n(Sticks),}
+
+		$f{n(LowTom2),}
+		$l{n(LowTom1),}
+		$m{n(MidTom1),}
+		$t{n(HighTom1),}
+
+		$B{n(HighBongo),}
+		$G{n(LowBongo),}
+		$M{n(MuteHighConga),}
+		$O{n(OpenHighConga),}
+		$A{n(LowConga),}
+
+
+		//////////////////////////////////////
+			r1r1r1 r2 Rythm{L8h8o4}
+
+		//////////////////////////////////////
+		#r1={
+			Sub { Rythm { [8 h8] } }
+			Rythm { b4k2k8b8 }
+		}
+		#r2={
+			Sub { Rythm { [7 h8] o8 } }
+			Rythm { b4k2k8b8 }
+		}
+		#r3={
+			Sub {v-80 [5 Rythm {s20} v+10 ] v+30 Rythm{s2 } }
+			Rythm {'b8h8'h8o16m16l16f16}
+		}
+		// ラテンパーカッションの定義
+		#rr={
+			Rythm {
+				O16M16A16M16 O16M16A16A16
+			}
+		}
+		#rr1={
+			Rythm {
+				O16M16M16B32B32 B16G16G16A16
+			}
+		}
+
+		//////////////////////////////////////
+		Sub { Rythm { c1 } }
+		Sub { [7 #rr ] #rr1}
+		[3 #r1] #r2
+
+		//////////////////////////////////////
+		Sub { [16 #rr ] #rr1 }
+		Sub { Rythm { y1 } }
+		[3
+			#r1 #r2
+		]
+		[2 #r2]
+		#r3
+
+		//////////////////////////////////////
+		#r4={
+			Sub {Rythm{[8 h8] } }
+			Rythm {b4s8b8b4s4}
+		}
+		#r5={
+			Sub {Rythm{[7 h8] o8} }
+			Rythm {b4s8b8b4s4}
+		}
+		#r6={
+			Sub {Rythm{[7 h8] o8} }
+			Rythm {b4s8b8b4s16m16l16f16}
+		}
+		//////////////////////////////////////
+		Sub { [17 #rr ] #rr1 }
+		Sub { Rythm { c1 } }
+		[2 #r4 #r5 ]
+		Sub { Rythm { y1 } }
+		[1 #r4 #r5 ]
+		#r5 #r5 #r6
+		//////////////////////////////////////
+		#r7={
+			Sub { Rythm { [8 h8] } }
+			Rythm { b4s8b8b4s4 }
+		}
+		#r8={
+			Sub { Rythm { [7 h8] o8 } }
+			Rythm { b4s8b8b4s4 }
+		}
+		#r9={
+			Sub {v-100 [7 Rythm {s28} v+10 ] v+30 Rythm{s2 } }
+			Rythm {'b8h8'h8o16m16l16f16}
+		}
+
+		#r10={
+			Sub { Rythm { [7 h8] o8 } }
+			Rythm { b4s8b8b4s16m16l16f16 }
+		}
+		//////////////////////////////////////
+		Sub { [7 #rr ] #rr1 }
+		Sub { Rythm { c1 } }
+		[3 #r8]
+		#r10
+
+		//////////////////////////////////////
+		Sub { [7 #rr ] #rr1 }
+		Sub { Rythm { y1 } }
+		#r7 #r8
+		#r7 #r10
+
+		//////////////////////////////////////
+		Sub { [16 #rr ] #rr1 }
+		Sub { Rythm { c1 } }
+		[3
+			#r7 #r8
+		]
+		[2 #r8]
+		#r9
+		//////////////////////////////////////
+		Sub { [17 #rr ] #rr1 }
+		Sub { Rythm { y1 } }
+		[2 #r4 #r5 ]
+		Sub { Rythm { c1 } }
+		[1 #r4 #r5 ]
+		#r5 #r5 #r6
+
+		//////////////////////////////////////
+		Sub { r1 r1 r1 r2 #rr1 }
+		#r11={
+			Sub { Rythm { [6 h8] } }
+			Sub { Rythm { b4k8b8b4t16m16l16f16 } }
+			Sub { r1 Rythm { o8.   o16 o16o16o16o16&o1 } }
+		}
+		Rythm {L1} r1r1 r2 Rythm{L8h8o4}
+
+		Sub { [6 #rr ] }
+		Sub {
+			#r1
+			#r2
+			#r11
+		}
+		//
+		Tempo 117
+		r2
+		Tempo 116
+		r2
+		Tempo 115
+		r4
+		Tempo 114
+		r4
+		//
+		Tempo 112
+		r4
+		Tempo 110
+		r4
+		Tempo 108
+		r4
+		Tempo 106
+		r4
+		//
+		Tempo 104
+		r8
+		Tempo 102
+		r8
+		Tempo 100
+		r12
+		Tempo 98
+		r12
+		Tempo 96
+		r12
+		Tempo 94
+		r12
+		Tempo 92
+		r12
+		Tempo 90
+		r12
+		//
+		Tempo 88
+		r16
+		Tempo 86
+		r16
+		Tempo 84
+		r16
+		Tempo 82
+		r16
+		Tempo 80
+		r16
+		Tempo 78
+		r16
+		Tempo 76
+		r16
+		Tempo 74
+		r16
+		Tempo 72
+		r1
+		Tempo 70
+		r16
+		Tempo 68
+		r16
+		Tempo 66
+		r16
+		Tempo 64
+		r16
+		Tempo 62
+		r16
+		Tempo 60
+		r16
+
+}
+
+TR(0)
+	Lyric={"Arcana！神に選ばれし愚者よ"}
+	[2 r1]
+	Lyric={"運命（さだめ）の輪を破れ Endless Duel"}
+	[2 r1]
+	Lyric={""}
+	[4 r1]
+
+	Lyric={"それは占いの日　二人の教皇見た夢"}
+	[2 r1]
+	Lyric={"太陽と月重なる時　悪魔が目覚める"}
+	[2 r1]
+	Lyric={"吊るされた隠者は　知識（ルーン）を求めて魔術師に"}
+	[2 r1]
+	Lyric={"死神は誰に　微笑むのだろう"}
+	[2 r1]
+	Lyric={""}
+	r4
+	Lyric={"二百年の昔の話"}
+	[2 r1]
+	Lyric={"ある人間が啓示を受けた"}
+	[2 r1]
+	Lyric={"三百年の未来の話"}
+	[2 r1]
+	Lyric={"占いは戦いに変わる"}
+	[2 r1]
+	r4
+	Lyric={""}
+	r1
+
+	Lyric={"Arcana！ 審判の日はもう近い"}
+	r1 r2.
+	Lyric={"世界の終焉を救え　Endless Duel"}
+	[2 r1]
+	r4
+
+	Lyric={""}
+	[4 r1]
+
+	Lyric={"それは占いの日　二人の皇帝見た夢"}
+	[2 r1]
+	Lyric={"節制の日々は終わり　恋人は引き裂かれる"}
+	[2 r1]
+	Lyric={"唸り声あげる戦車　力だけがこの世の全て"}
+	[2 r1]
+	Lyric={"正義はどこにあるのだろう"}
+	[2 r1]
+	Lyric={""}
+	r4
+
+	Lyric={"二百年の昔の話"}
+	[2 r1]
+	Lyric={"ある人間が暗示を受けた"}
+	[2 r1]
+	Lyric={"三百年の未来の話"}
+	[2 r1]
+	Lyric={"占いは戦いに変わる"}
+	[2 r1]
+	r4
+	r1
+
+	Lyric={"Arcana！ 絶望の塔駆け抜けて"}
+	[2 r1]
+	Lyric={"希望の星をつかめ　Endless Duel"}
+	[2 r1]
+	Lyric={"Arcana！ 神に選ばれし愚者よ"}
+	[2 r1]
+	Lyric={"運命（さだめ）の輪を破れ Endless Duel"}
+	[2 r1]
+	r4
+	Lyric={""}
+
+
+End
+
+##############################################################################
+#
+# TiMidiTy Config (v2.0)
+
+dir ../patches/guspat/izumo/inst/GUS
+dir ../patches/guspat/izumo/inst/GUS/gsdrum00
+dir ../patches/guspat/izumo/inst/GUS/gsdrum08
+dir ../patches/guspat/izumo/inst/GUS/gsdrum25
+dir ../patches/guspat/izumo/inst/GUS/gsdrum40
+dir ../patches/guspat/izumo/inst/GUS/power
+dir ../patches/guspat/izumo/inst/gusperc
+dir ../patches/guspat/izumo/inst/mazpat
+dir ../patches/guspat/izumo/inst/misc
+dir ../patches/guspat/izumo/inst/orchhit-patch
+dir ../patches/guspat/izumo/inst/release	
+dir ../patches/guspat/izumo/inst/roland
+dir ../patches/guspat/izumo/inst/wime
+dir ../patches/guspat/izumo/inst/wowpats
+dir ../patches/guspat/izumo/inst
+dir ../patches/guspat/izumo
+dir ../patches/sf2_part/piano
+dir ../patches/sf2_all
+dir ../patches/sf2_all/atomic
+dir ../patches/sf2_part/famicom
+dir ../patches/sf2_part/drumkit
+dir ../patches/sf2_all/realgs
+
+dir ../patches/arukana
+
+source default.cfg
+source gsdrum.cfg
+source gsdrum25.cfg
+source sfx.cfg
+source mt32.cfg
+source power.cfg
+source release.cfg
+
+dir ../patches/atomic
+dir ../patches/fluid3
+dir ../patches/atomic
+dir ../patches/famicom
+dir ../patches/syuuhou/ultimate
+dir ../patches/syuuhou/realgs
+
+bank 0
+	# pad
+	88 GUS/fantasia.pat amp=7 rate=245:50:50:50:50:50
+
+	# next pad
+	90 %font Titanic_200_GMGS_1.2.sf2 0 88 amp=90 rate=245:10:10:10:10:10
+
+	# pad
+	9 %font FluidR3GM.SF2 0 88  amp=100 rate=245:50:50:50:50:50
+
+	# warm pad
+#	89 %font atomic.sf2 0 89 rate=180:30:2:80:80:80 offset=255:220:210:100:0:0 amp=42
+#	89 %font FluidR3GM.SF2 0 89 amp=300 rate=180:30:2:80:80:80 offset=255:220:210:100:0:0
+#	89 %font FluidR3GM.SF2 0 89 amp=300 rate=130:1:1:80:80:80 offset=255:220:210:100:0:0
+	89 %font Titanic_200_GMGS_1.2.sf2 0 48 amp=70 rate=235
+	90 %font atomic.sf2 0 40 amp=60 rate=255
+
+	# sub melody
+		#piccoro
+	40 %font atomic.sf2 0 72 amp=180 tune=+12 pan=20 keep=loop rate=255:75:20 offset=255:170:150
+		#clalinet
+	42 %font Titanic_200_GMGS_1.2.sf2 0 71 amp=180 tune=0 pan=20 keep=loop rate=255:75:20 offset=255:170:150
+
+
+40 %font Piano_SplendidGrand.sf2 0 0 tune=+24 amp=90 keep=env keep=loop rate=:100:0:100:220:220:220 pan=0
+#42 %font Piano_SplendidGrand.sf2 0 0 tune=+12 amp=90 keep=env keep=loop rate=:100:0:100:220:220:220 pan=0
+
+#40 %font ClavinovaGrandPiano2.sf2 0 0 amp=70 tune=+12
+42 %font ClavinovaGrandPiano2.sf2 0 0 amp=70
+
+		#piccoro
+#	43 %font atomic.sf2 0 72 amp=160 tune=+12 pan=20 keep=loop rate=255:60:20 offset=255:200:150
+
+43 %font Piano_SplendidGrand.sf2 0 0 tune=+12 amp=100 keep=env keep=loop rate=:100:0:100:220:220:220 pan=0
+#43 %font ClavinovaGrandPiano2.sf2 0 0 amp=60 tune=+12
+		#violin
+	41 %font atomic.sf2 0 40 amp=120 pan=0 keep=loop rate=255:40:20:120:120:120 offset=255:200:150
+#	40 %font Titanic_200_GMGS_1.2.sf2 0 40 amp=100
+
+	# strings 1
+	48 %font Titanic_200_GMGS_1.2.sf2 0 48 amp=150
+	49 %font Titanic_200_GMGS_1.2.sf2 0 49 amp=350 rate=255:30::120:120 offset=255:200:200:200
+
+	# guitor
+#	24 %font Titanic_200_GMGS_1.2.sf2 0 24 amp=190 keep=loop rate=255:80:20 offset=255:170:0
+	24 %font atomic.sf2 0 24 amp=70 keep=loop rate=255:65:20 offset=255:140:0
+
+	64 %font Atomic.sf2 0 64 amp=160 pan=30	
+	65 %font Atomic.sf2 0 65 amp=120 pan=-30	
+
+	53 %font Atomic.sf2 0 53 amp=23 pan=30	
+
+
+
+# orch harp
+#	46 %font atomic.SF2 0 46 amp=80 pan=-12	
+#	46 gus/harp.pat amp=250 keep=env rate=252:230:90:80:80:80
+	46 %font Titanic_200_GMGS_1.2.sf2 0 46 amp=155 keep=env rate=252:80:50:45:45:45
+#
+# orch pizz
+	47 %font atomic.SF2 0 45 amp=50 pan=-12	
+
+# ac bass
+#	32 %font FluidR3GM.SF2 0 32 amp=200 pan=0 rate=:2:2 offset=:255:60
+#	33 %font FluidR3GM.SF2 0 32 amp=200 pan=0 rate=:2:2 offset=:255:60
+	32 %font Titanic_200_GMGS_1.2.sf2 0 36 amp=235 pan=0 rate=:2:2 offset=:255:60.
+	33 %font Titanic_200_GMGS_1.2.sf2 0 36 amp=235 pan=0 rate=:2:2 offset=:255:60
+
+#
+# piano
+#	 0 %font Piano_SplendidGrand.sf2 0 0 tune=+12 amp=32 keep=env keep=loop rate=:100:0:100:220:220:220 pan=0
+#	 0 %font ClavinovaPiano1V2.0.sf2 0 0 amp=75
+	 0 %font splendid_136.sf2 0 1 amp=45
+# tune=+12 amp=70 keep=env keep=loop rate=:100:0:100:220:220:220 pan=0
+
+
+# piccolo
+	72 %font atomic.SF2 0 72 amp=180 pan=20 keep=loop rate=255:10:20 offset=255:200:150
+
+# flute
+	73 %font atomic.SF2 0 73 amp=180 pan=20 keep=loop rate=255:10:20 offset=255:200:150
+	74 %font atomic.SF2 0 73 amp=180 pan=20 keep=loop rate=150:10:20 offset=255:200:150
+
+	85 %font fluid.sf2 0 85 amp=30 pan=18	
+
+
+##############################################################################
+# Standard drums
+
+drumset 0
+
+	# bd
+#	36 %font drumkit1.3XG.sf2 128 0 36 amp=140
+#	36 %font Titanic_200_GMGS_1.2.sf2 128 0 36 amp=280
+#	36 TIGHTKI1 tune=-12 amp=350
+	36 STD_BD_4 tune=-10 amp=260
+
+	# rim shot
+#	31 %font drumkit1.3XG.sf2 128 0 37 amp=130 tune=-1
+#	31 %font Titanic_200_GMGS_1.2.sf2 128 0 31 amp=100
+	31 TMTRIM9B tune=0 amp=255
+
+	# sd
+#	38 %font drumkit1.3XG.sf2 128 0 38 amp=100
+#	40 %font drumkit1.3XG.sf2 128 0 38 amp=70
+#	38 %font FluidR3GM.SF2 128 0 38 amp=120
+#	38 %font Titanic_200_GMGS_1.2.sf2 128 0 38 amp=192
+#	38 TTSNB11.pat tune=-12 amp=300
+	38 gsdrum00/snare2 amp=185
+
+	# tom
+	41 gsdrum00/tomlo2 amp=130
+	43 gsdrum00/tomlo1 amp=130
+	45 gsdrum00/tommid2 amp=200
+	47 gsdrum00/tommid1 amp=200
+	48 gsdrum00/tomhi2 amp=240
+	50 gsdrum00/tomhi1 amp=240
+
+#	42 %font FluidR3GM.SF2 128 0 42 amp=120
+#	44 %font FluidR3GM.SF2 128 0 42 amp=120
+#	46 %font FluidR3GM.SF2 128 0 46 amp=120
+
+#	41 %font drumkit1.3XG.sf2 128 0 41 amp=70
+#	43 %font drumkit1.3XG.sf2 128 0 41 amp=70
+#	45 %font drumkit1.3XG.sf2 128 0 41 amp=120
+
+	# hhclose
+#	42 %font FluidR3GM.SF2 128 0 42 amp=55 pan=31	
+#	42 %font drumkit1.3XG.sf2 128 0 42 amp=210
+	42 %font drumkit1.3XG.sf2 128 0 42 amp=140 rate=:200:200
+
+	# hhpedal
+#	44 %font FluidR3GM.SF2 128 0 44 amp=100 pan=31	
+#	44 %font drumkit1.3XG.sf2 128 0 44 amp=160
+	44 %font drumkit1.3XG.sf2 128 0 46 amp=170 rate=:50:50 offset=::100:0
+
+	# hhopen
+#extension altassign 42 46
+	46 %font drumkit1.3XG.sf2 128 0 46 amp=155
+# rate=:40:70 offset=::100:0
+
+#	52 %font drumkit1.3XG.sf2 128 0 46 amp=140 rate=:40:40 offset=::100:0
+
+	# cymbal
+#	49 %font Titanic_200_GMGS_1.2.sf2 128 0 49 amp=100 rate=:5:5:5:5:5
+#	49 %font FluidR3GM.SF2 128 0 49 amp=100 rate=:5:5:5:5:5
+	49 %font Titanic_200_GMGS_1.2.sf2 128 0 55 amp=140 pan=+70 tune=+0
+
+#	49 gsdrum00/cymcrsh1 amp=130
+#	49 %font drumkit1.3XG.sf2 128 0 49 amp=45
+#	49 %font Atomic.sf2 128 0 49 amp=150 pan=97 keep=loop rate=:20:1:20:10:10:10#
+#	49 %font FluidR3GM.SF2 128 0 57 amp=210 pan=31	
+
+	# ride
+#	53 %font atomic.sf2 128 0 52 amp=120 pan=31	
+	53 %font Titanic_200_GMGS_1.2.sf2 128 0 51 keep=loop keep=env amp=200
+
+	# Side cymbal
+#	57 %font drumkit1.3XG.sf2 128 0 55 amp=110 pan=-70
+	57 %font Titanic_200_GMGS_1.2.sf2 128 0 55 amp=140 pan=-20 tune=+0
+
+	# belltree
+	84 %font Titanic_200_GMGS_1.2.sf2 128 0 84 keep=loop keep=env amp=500
+
+	# conga & bongo
+	60 %font atomic.sf2 128 0 60 amp=100
+	61 %font atomic.sf2 128 0 61 amp=100
+	62 %font atomic.sf2 128 0 62 amp=65
+	63 %font atomic.sf2 128 0 63 amp=65
+	64 %font atomic.sf2 128 0 64 amp=65
+
+#	60 %font atomic.sf2 128 0 60 amp=145
+#	61 %font atomic.sf2 128 0 61 amp=145
+#	62 %font atomic.sf2 128 0 62 amp=135
+#	63 %font atomic.sf2 128 0 63 amp=135
+#	64 %font atomic.sf2 128 0 64 amp=135
+
+# End of configuration file
+
+
+##############################################################################
+
+おまけ・・・
+
+この曲は、YoutubeやSkype通話を利用して、原作者の方が実際に歌いながら
+音とって、メロディーを完成させたものです。
+
+いわゆる、クラウド作曲？
+
+昔は、同じことを電話越しでやったことがあるのですが・・・
+
+

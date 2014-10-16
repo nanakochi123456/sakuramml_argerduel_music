@@ -1,0 +1,437 @@
+// @@
+
+Tempo 85
+
+#tempo1={
+	Tempo 85
+	[6 r1]
+	Tempo 82
+	r2
+	Tempo 80
+	r2
+	Tempo 78
+	r2
+	Tempo 75
+	r2
+	Tempo 148
+}
+
+#a1={
+	l4
+	r1
+	ra>c#e
+	f1^1
+}
+
+#a2={
+	l16
+	ef#ga
+	br>drc#rer<
+	b24>c#24<b24 a16r16
+	l16ef#ga
+	l16br>drc#rer<
+	b24>c#24<b24 >e16r16<
+
+	ef#ga
+	br>drc#rer<
+	b24>c#24<b24 a16r16
+	l16ef#ga
+	l16br>drc#rer<
+	b24>c#24<b24 >e16r16<
+
+	egb>e
+
+}
+
+#a3={
+	l16
+	e8d<a8.b8>
+	e8d<a8.b8>
+	e8d<a8.b8>
+	e8d8c8<b8>
+
+	e8d<a8.b8>
+	e8d<a8.b8>
+	e8d<a8.b8>
+	e8d8c8<b8
+}
+
+#a4={
+	l16
+	ef#ga
+	br>drc#rer<
+	b24>c#24<b24 a16r16
+	l16ef#ga
+	l16br>drc#rer<
+	b24>c#24<b24 >e16r16<
+
+	ef#ga
+	br>drc#rer<
+	b24>c#24<b24 a16r16
+	l16ef#ga
+	l16br>drc#rer<
+	b24>c#24<b24 >e16r16<
+
+}
+
+#c1={
+	q100
+	'f#1^1>c#1^1f#1^1<'
+	'd1^1a1^1>d1^1<'
+}
+
+#f1={
+	q100
+	r1r1
+	Sub{a1.}
+	>f2e2d2<a2
+}
+
+#f2={
+	q100
+	r1r1
+	>
+	Sub{d1^1}
+	a2>c2<b2a2
+}
+
+#f3={
+	l8
+	'eb''g>d<''f#>c#<''a>e<'
+	l24'eb''f#>c#<''eb'l8'da'
+	r4
+	'eb''g>d<''f#>c#<''a>e<'
+	l24'f#b''g#>c#<''f#b'l8'g>e<'
+	r4
+	'eb''g>d<''f#>c#<''a>e<'
+	l24'eb''f#>c#<''eb'l8'da'
+	r4
+	'eb''g>d<''f#>c#<''a>e<'
+	l24'f#b''g#>c#<''f#b'l8'g>e<'
+	r4
+}
+
+#f4={
+	<
+	l2
+	[2
+		'fa>e<'
+		'ea>e<'
+		'da>e<'
+		'ca>e<'
+	]
+	>
+}
+
+#b1={
+	f#1^1
+	d1^1
+}
+
+#b2={
+	[5 r1]
+	f2e2d2c2
+	f2e2d2c2
+	[4 r1]
+}
+
+#t2={
+	[2
+		[3
+			[2 e<b>]
+		]
+		e<b>e4
+	]
+}
+#t1={
+	l8
+	e<b>e<b>e2
+	#t2
+}
+
+TR(1)
+	Key(0)
+	v120
+	音色(Trumpet)
+	o4q100
+	[2 #a1 ]
+
+	o5
+	音色(Violin)
+	r2.
+	#a2
+	#a3
+	r2.
+	#a4
+
+	Key(1)
+	#a2
+	#a3
+	r2.
+	#a4
+	Key(0)
+	#a4
+
+TR(2)
+	Key(0)
+	v1
+	音色(Trumpet)
+	o4q100
+	[2 #a1 ]
+
+	o5
+	音色(Piccolo)
+	r2.
+	
+	#a2
+	#a3
+	r2.
+	#a4
+
+	v120
+	Key(1)
+	#a2
+	#a3
+	r2.
+	#a4
+	Key(0)
+	#a4
+
+TR(7)
+	Key(0)
+	v100
+	音色(FrenchHorn)
+	o4
+	#f1
+	#f2
+
+	o5
+	r1
+	音色(PizzicatoStrings)
+	#f3
+	音色(Strings1)
+	#f4
+	音色(PizzicatoStrings)
+	r1
+	#f3
+
+	Key(1)
+	o5
+	音色(PizzicatoStrings)
+	#f3
+	音色(Strings1)
+	#f4
+	音色(PizzicatoStrings)
+	r1
+	#f3
+	Key(0)
+	音色(PizzicatoStrings)
+	#f3
+
+TR(8)
+	Key(0)
+	v100
+	音色(TremoloStrings)
+	o4q100
+	[2 #c1 ]
+
+TR(9)
+	Key(0)
+	v127
+	音色(Contrabass)
+	o3q100
+	[2 #b1 ]
+	#b2
+	Key(1)
+	#b2
+//	Key(0)
+//	#b2
+
+TR(15)
+	Key(0)
+	o4
+	音色(Timpani)
+	[8 r1]
+	#t1
+	[4 r1]
+	#t1
+	Key(1)
+	#t2
+	[4 r1]
+	#t1
+	Key(0)
+	#t2
+
+TR(16)
+	Key(0)
+	#tempo1
+
+TR(10)
+	Key(0)
+	$b{n(Kick1),}
+	$s{n(Snare1),}
+	$c{n(CrashCymbal1),}
+	$y{n(CrashCymbal2),}
+	$m{n(MuteTriangle),}
+	$t{n(Tambourine),}
+	$o{n(OpenTriangle),}
+
+	[6 r1]
+	#r00={
+		System.vAdd=1
+		v30
+		Rythm {
+			[24 v++ s48s48s48s48 ]
+		}
+	}
+	#r01={
+		System.vAdd=2
+		v48
+		Rythm {
+			[32 v++ s32 ]
+		}
+	}
+
+	#rt={
+		System.vAdd=2
+		v40
+		Rythm {
+			[16 v++ t32 ]
+		}
+
+	}
+	#r1={
+		Sub {
+			r2 #rt
+		}
+		Sub {
+			Rythm {
+				'b4o4''b4o4''b2o4'
+			}
+		}
+		Rythm {
+			c4y4c2
+		}
+	}
+	#r2={
+		[2
+			Rythm {
+				'b4o4c4''b4o4y4'
+			}
+		]
+	}
+	#r3={
+		Rythm {
+			'b2c2''b2y2'
+		}
+	}
+	#r00
+	#r1
+	[2
+		[2 #r2 #r1]
+		Sub {[3 r1] #r01}
+		[4 #r3]
+		#r1
+		[2 #r2 #r1]
+	]
+	[2 #r2 #r1]
+
+End
+
+##############################################################################
+#
+# TiMidiTy++ Config
+
+dir ../patches/izumo/inst/GUS
+dir ../patches/izumo/inst/GUS/gsdrum00
+dir ../patches/izumo/inst/GUS/gsdrum08
+dir ../patches/izumo/inst/GUS/gsdrum25
+dir ../patches/izumo/inst/GUS/gsdrum40
+dir ../patches/izumo/inst/GUS/power
+dir ../patches/izumo/inst/gusperc
+dir ../patches/izumo/inst/mazpat
+dir ../patches/izumo/inst/misc
+dir ../patches/izumo/inst/orchhit-patch
+dir ../patches/izumo/inst/release	
+dir ../patches/izumo/inst/roland
+dir ../patches/izumo/inst/wime
+dir ../patches/izumo/inst/wowpats
+dir ../patches/izumo/inst
+dir ../patches/izumo
+dir ../patches/piano
+dir ../patches/Titanic
+dir ../patches/famicom
+dir ../patches/drumkit
+dir ../patches/syuuhou/realgs
+
+dir ../patches/arukana
+
+source default.cfg
+source gsdrum.cfg
+source gsdrum25.cfg
+source sfx.cfg
+source mt32.cfg
+source power.cfg
+source release.cfg
+
+##############################################################################
+# End of configuration file
+
+
+dir ../patches/atomic
+dir ../patches/fluid3
+dir ../patches/atomic
+dir ../patches/famicom
+dir ../patches/syuuhou/ultimate
+dir ../patches/syuuhou/realgs
+
+bank 0
+	# trumpet
+#	56 trombone.pat amp=250 keep=loop rate=240:10:5:120:120:120 offset=255:200:150 vibrato=0:0:0
+	56 %font FluidR3GM.SF2 0 57 amp=100 keep=loop rate=240:10:5:120:120:120 offset=255:200:150 vibrato=0:0:0
+
+	# string1
+	48 %font Titanic_200_GMGS_1.2.sf2 0 48 amp=100
+
+	# violin
+	40 %font atomic.sf2 0 41 amp=170 pan=0 keep=loop rate=255:40:20:120:120:120 offset=255:200:150 tune=-12
+
+	# tr.string
+	44 %font Titanic_200_GMGS_1.2.sf2 0 44 amp=150 keep=loop rate=255:1:1:120:120:120 offset=255:250:250
+
+	# horn
+	60 %font Titanic_200_GMGS_1.2.sf2 0 60 amp=120
+
+	# piccoro
+	72 %font atomic.sf2 0 72 amp=70 tune=+12 rate=::230:230:230
+
+	# contra
+	43 %font Titanic_200_GMGS_1.2.sf2 0 49 amp=130 rate=255
+
+	# timpany
+	47 %font Titanic_200_GMGS_1.2.sf2 0 47 amp=300 rate=255 tune=+12
+
+
+##############################################################################
+# Standard drums
+
+drumset 0
+
+	# bd
+	36 %font Titanic_200_GMGS_1.2.sf2 128 48 36 amp=300
+
+	# sd
+	38 %font FluidR3GM.SF2 128 48 38 amp=130 tune=-1
+
+	# cymbal
+	49 %font Titanic_200_GMGS_1.2.sf2 128 48 55 amp=250 pan=+70 tune=+0
+
+	# Side cymbal
+	57 %font Titanic_200_GMGS_1.2.sf2 128 48 55 amp=250 pan=-20 tune=+0
+
+	# tambalin
+	54 %font FluidR3GM.SF2 128 0 54 keep=loop keep=env amp=120
+
+	# open triangle
+#	81 %font FluidR3GM.SF2 128 0 81 keep=loop keep=env amp=110
+	81 triangl2.pat keep=env amp=250
